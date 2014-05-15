@@ -57,13 +57,17 @@ class TND_Widget extends WP_Widget
 		// swap output based on sandbox status
 		if ( ! Ninja_Demo()->is_sandbox() ) { // the user is NOT inside of a sandbox ?>
 			<div class="textwidget tnd-widget">
-				<?php echo ! empty( $instance['filter'] ) ? wpautop( $not_sandbox_text ) : $not_sandbox_text; ?>
+				<div class="tnd-widget-content tnd-not-in-demo">
+					<?php echo ! empty( $instance['filter'] ) ? wpautop( $not_sandbox_text ) : $not_sandbox_text; ?>
+				</div>
 				<?php echo do_shortcode('[try_demo]'); ?>
 			</div>
 			<?php
 		} else { // the user is inside of a sandbox ?>
 			<div class="textwidget tnd-widget">
-				<?php echo ! empty( $instance['filter'] ) ? wpautop( $sandbox_text ) : $sandbox_text; ?>
+				<div class="tnd-widget-content tnd-in-demo">
+					<?php echo ! empty( $instance['filter'] ) ? wpautop( $sandbox_text ) : $sandbox_text; ?>
+				</div>
 			</div>
 			<?php
 		}
