@@ -19,7 +19,7 @@ Follow Try Ninja Demo's development on [Github](https://github.com/sdavis2702/tr
 == Installation ==
 
 1. Upload `try-ninja-demo` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+2. Network Activate the plugin through the Network Admin 'Plugins' menu in WordPress
 3. Visit the dashboard -> Appearance -> Widgets page to use the "Try Ninja Demo" widget.
 
 == Frequently Asked Questions ==
@@ -27,6 +27,10 @@ Follow Try Ninja Demo's development on [Github](https://github.com/sdavis2702/tr
 = Do I have to use Ninja Demo to use this plugin? =
 
 Yes. This plugin will not create the widget if Ninja Demo is not activated.
+
+= What does "Network Activate" mean in the installation instructions? =
+
+Ninja Demo runs on WordPress Multisite in a network configuration. Each demo user actually creates their own instance of the main network site every time they log into the demo. By network activating this plugin, you make it available to each [demo] site in the network.
 
 == Screenshots ==
 
