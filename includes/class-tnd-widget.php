@@ -7,12 +7,16 @@ if ( ! defined( 'ABSPATH' ) ) exit; // no accessing this file directly
 
 class TND_Widget extends WP_Widget
 {
+	
+	/**
+	 * important information about the widget
+	 */
 	public function __construct() {
 		
 		// build widget specifics
 		$widget_ops = array( 
 			'classname'		=> 'try_ninja_demo_widget', 
-			'description'	=> __( 'Use this widget to display a sign in form that displays content based on whether or not the user is in the demo.', 'tnd' ) 
+			'description'	=> __( 'Use this widget to output the Ninja Demo sign-in form and display content based on whether or not the user is inside the demo.', 'tnd' ) 
 		);
 		$control_ops = array( 
 			'width'		=> 400, 
@@ -26,8 +30,7 @@ class TND_Widget extends WP_Widget
 			 $widget_ops,
 			 $control_ops
 		);
-	}
-	
+	}	
 
 	/**
 	 * outputs the content of the widget
@@ -65,8 +68,7 @@ class TND_Widget extends WP_Widget
 			<?php
 		}
 		echo $after_widget;
-	}
-	
+	}	
 
 	/**
 	 * processing widget options on save
@@ -85,8 +87,7 @@ class TND_Widget extends WP_Widget
 		}
 		$instance['filter'] = isset( $new_instance['filter'] );
 		return $instance;
-	}
-	
+	}	
 
 	/**
 	 * outputs the options form on admin
@@ -111,13 +112,13 @@ class TND_Widget extends WP_Widget
 		
 		<!-- For users who are not inside the demo yet -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'not_sandbox_text' ); ?>"><?php _e( 'User <strong>IS NOT</strong> inside the demo:', 'tnd' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'not_sandbox_text' ); ?>"><?php _e( 'User IS NOT inside the demo:', 'tnd' ); ?></label>
 			<textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id( 'not_sandbox_text' ); ?>" name="<?php echo $this->get_field_name( 'not_sandbox_text' ); ?>"><?php echo $not_sandbox_text; ?></textarea>
 		</p>
 		
 		<!-- For users who are inside the demo -->
 		<p>
-			<label for="<?php echo $this->get_field_id( 'sandbox_text' ); ?>"><?php _e( 'User <strong>IS</strong> inside the demo:', 'tnd' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'sandbox_text' ); ?>"><?php _e( 'User IS inside the demo:', 'tnd' ); ?></label>
 			<textarea class="widefat" rows="10" cols="20" id="<?php echo $this->get_field_id( 'sandbox_text' ); ?>" name="<?php echo $this->get_field_name( 'sandbox_text' ); ?>"><?php echo $sandbox_text; ?></textarea>
 		</p>
 		
@@ -133,7 +134,7 @@ class TND_Widget extends WP_Widget
 }
 
 // register TND_Widget widget
-function register_tnd_widget() {
+function tnd_register_widget() {
 	register_widget( 'TND_Widget' );
 }
-add_action( 'widgets_init', 'register_tnd_widget' );
+add_action( 'widgets_init', 'tnd_register_widget' );

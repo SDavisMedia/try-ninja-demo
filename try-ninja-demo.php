@@ -26,43 +26,51 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // no accessing this file directly
 
 
-class Try_Ninja_Demo
-{
-	public function __construct() {
+// make sure Ninja Demo is activated
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+if ( is_plugin_active( 'ninja-demo/ninja-demo.php' ) ) {
 
-		// define plugin name
-		define( 'TND_NAME', 'Try Ninja Demo' );
-
-		// define plugin version
-		define( 'TND_VERSION', '1.0.0' );
-
-		// define plugin directory
-		define( 'TND_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
-
-		// define plugin root file
-		define( 'TND_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
-
-		// load text domain
-		add_action( 'init', array( $this, 'load_textdomain' ) );
+	class Try_Ninja_Demo
+	{	
+	
+		/**
+		 * important plugin information and recourses
+		 */
+		public function __construct() {
+	
+			// define plugin name
+			define( 'TND_NAME', 'Try Ninja Demo' );
+	
+			// define plugin version
+			define( 'TND_VERSION', '1.0.0' );
+	
+			// define plugin directory
+			define( 'TND_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
+	
+			// define plugin root file
+			define( 'TND_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
+	
+			// load text domain
+			add_action( 'init', array( $this, 'load_textdomain' ) );
+			
+			// load plugin files
+			$this->includes();
+		}	
+	
+		/**
+		 * load TND textdomain
+		 */
+		public function load_textdomain() {
+			load_plugin_textdomain( 'tnd', false, TND_DIR . 'languages/' );
+		}		
 		
-		// load plugin files
-		$this->includes();
+		/**
+		 * all required plugin files
+		 */
+		public function includes() {
+			require_once( TND_DIR . 'includes/class-tnd-widget.php' );
+		}
 	}
-
-
-	/**
-	 * load TND textdomain
-	 */
-	public function load_textdomain() {
-		load_plugin_textdomain( 'tnd', false, TND_DIR . 'languages/' );
-	}
+	new Try_Ninja_Demo();
 	
-	
-	/**
-	 * all required plugin files
-	 */
-	public function includes() {
-		require_once( TND_DIR . 'includes/class-tnd-widget.php' );
-	}
-}
-new Try_Ninja_Demo();
+} // end check for Ninja Demo
