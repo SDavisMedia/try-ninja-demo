@@ -12,7 +12,7 @@ Display the Ninja Demo entry form with a widget.
 
 == Description ==
 
-This simple plugin adds a new widget that automatically outputs the demo entry form and allows you to specify the text to display based on whether or not a user is inside of the demo.
+Intended for use with [Ninja Demo](http://ninjademo.com/), this simple plugin adds a new widget that automatically outputs the demo entry form and allows you to specify the text to display based on whether or not a user is inside of the demo.
 
 Follow Try Ninja Demo's development on [Github](https://github.com/sdavis2702/try-ninja-demo)
 
