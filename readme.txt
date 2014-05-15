@@ -26,7 +26,7 @@ Follow Try Ninja Demo's development on [Github](https://github.com/sdavis2702/tr
 
 = Do I have to use Ninja Demo to use this plugin? =
 
-Yes. This plugin will not create the widget is Ninja Demo is not activated.
+Yes. This plugin will not create the widget if Ninja Demo is not activated.
 
 == Screenshots ==
 
