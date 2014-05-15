@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Try Ninja Demo
  * Plugin URI: https://github.com/sdavis2702/try-ninja-demo
- * Description: This plugin adds a new widget that lets you easily invite users to try your Ninja Demo live demo.
+ * Description: This simple plugin adds a new widget that automatically outputs the demo entry form and allows you to specify the text to display based on whether or not a user is inside of the demo.
  * Version: 1.0.0
  * Author: Sean Davis
  * Author URI: http://seandavis.co
