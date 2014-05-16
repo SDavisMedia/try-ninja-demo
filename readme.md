@@ -33,12 +33,12 @@ All you have to do is use the widget. When the user is not inside of the demo, t
 
 Certainly. Use the following CSS classes.
 
-`.try-ninja-demo-widget` - Wraps the entire widget output
-`.tnd-widget` - Wraps all content below the widget title
-`.tnd-widget-content` - Wraps all content you place inside of either textarea
-`.tnd-not-in-demo` - Wraps only the content that displays if the user is not in the demo
-`.tnd-in-demo` - Wraps only the content that displays if the user is in the demo
-`.nd-start-demo` - (Ninja Demo) Wraps the form question and submit
+* `.try-ninja-demo-widget` - Wraps the entire widget output
+* `.tnd-widget` - Wraps all content below the widget title
+* `.tnd-widget-content` - Wraps all content you place inside of either textarea
+* `.tnd-not-in-demo` - Wraps only the content that displays if the user is not in the demo
+* `.tnd-in-demo` - Wraps only the content that displays if the user is in the demo
+* `.nd-start-demo` - (Ninja Demo) Wraps the form question and submit
 
 ### Screenshots
 
