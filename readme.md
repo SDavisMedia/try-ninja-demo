@@ -13,6 +13,7 @@ Intended for use with [Ninja Demo](http://ninjademo.com/), this simple plugin ad
 3. Visit the dashboard -> Appearance -> Widgets page to use the "Try Ninja Demo" widget.
 
 ### Frequently Asked Questions
+---
 
 Create a new [issue](https://github.com/sdavis2702/try-ninja-demo/issues) if your question is not answered below.
 
