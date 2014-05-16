@@ -42,12 +42,15 @@ Certainly. Use the following CSS classes.
 ### Screenshots
 
 The widget:
+
 ![The Widget](http://buildwpyourself.com/wp-content/uploads/edd/2014/05/tnd-widget.png)
 
 Widget output when not in demo:
+
 ![Widget output not in demo](http://buildwpyourself.com/wp-content/uploads/edd/2014/05/tnd-not-in-demo.png)
 
 Widget output when in demo:
+
 ![Widget output in demo](http://buildwpyourself.com/wp-content/uploads/edd/2014/05/tnd-in-demo.png)
 
 ### Bugs and Contributions
